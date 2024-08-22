@@ -4,14 +4,10 @@ import React, { useState, useEffect } from "react";
 export default function Home() {
   const [openApiKey, setOpenApiKey] = useState<string>("");
   const [query, setQuery] = useState<string>(
-    "what is the main topic of the file?"
+    "what does the document say about ai?"
   );
   const [response, setResponse] = useState<any>(null);
   const [loading, setLoading] = useState<boolean>(false);
-
-  useEffect(() => {
-    console.log("API Hostname:", process.env.NEXT_PUBLIC_API_HOSTNAME);
-  }, []);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
