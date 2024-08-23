@@ -36,24 +36,18 @@ To get started with this repository, follow the instructions below:
 
 To run the application using Docker, follow these steps:
 
-1. Build the Docker images for both frontend and backend:
-
-   ```bash
-   docker-compose build
-   ```
-
-2. Start the containers:
+1. Build and start the Docker images for both frontend and backend:
 
    ```bash
    docker-compose up
    ```
 
-3. Access the application:
+2. Access the application:
 
    - Frontend: `http://localhost:3000`
    - Backend: `http://localhost:5000`
 
-4. To stop the containers:
+3. To stop the containers:
 
    ```bash
    docker-compose down
@@ -64,7 +58,8 @@ To run the application using Docker, follow these steps:
 To deploy the application to Restack Cloud, run the following command:
 
 ```bash
-ts-node restack_up.ts
+npm install -g @restackio/restack-sdk-cloud-ts
+node restack_up.js
 ```
 
 ## Usage
