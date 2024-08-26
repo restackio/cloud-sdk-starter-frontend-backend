@@ -58,7 +58,7 @@ To run the application using Docker, follow these steps:
 To deploy the application to Restack Cloud, run the following command:
 
 ```bash
-npm install -g @restackio/restack-sdk-cloud-ts
+npm install @restackio/restack-sdk-cloud-ts
 node restack_up.js
 ```
 
