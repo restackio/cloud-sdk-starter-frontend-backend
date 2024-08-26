@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@restackio/restack-sdk-cloud-ts": "^0.0.15"
+    "@restackio/restack-sdk-cloud-ts": "^0.0.16"
   }
 }
