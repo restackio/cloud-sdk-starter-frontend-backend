@@ -12,6 +12,7 @@ const main = async () => {
         value: "test_2",
       },
     ],
+    dockerBuildContext: 'frontend'
   };
 
   const backendApp = {
@@ -23,12 +24,13 @@ const main = async () => {
         value: "test_2",
       },
     ],
+    dockerBuildContext: 'backend'
   };
 
   await restackCloudClient.stack({
     name: "development environment",
     previewEnabled: false,
-    applications: [frontendApp, backendApp],
+    applications: [backendApp, frontendApp],
   });
 
   await restackCloudClient.up();
