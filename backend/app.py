@@ -22,6 +22,9 @@ documents = loader.load()
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
 splits = text_splitter.split_documents(documents)
 
+@app.route('/', methods=['GET'])
+def health_check():
+    return jsonify({"status": "ok"}), 200
 
 @app.route('/query', methods=['POST'])
 def query():
