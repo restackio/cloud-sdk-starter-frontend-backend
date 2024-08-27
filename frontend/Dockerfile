@@ -19,7 +19,7 @@ ARG NEXT_PUBLIC_API_HOSTNAME
 RUN npm run build
 
 # Expose the port the app runs on
-EXPOSE 3000
+EXPOSE 80
 
 # Start the application
 CMD ["npm", "start"]
