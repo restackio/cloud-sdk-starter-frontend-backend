@@ -16,11 +16,8 @@ COPY . .
 ARG NEXT_PUBLIC_API_HOSTNAME
 ENV NEXT_PUBLIC_API_HOSTNAME=${NEXT_PUBLIC_API_HOSTNAME}
 
-# Build the application
-RUN npm run build
-
 # Expose the port the app runs on
 EXPOSE 80
 
 # Start the application
-CMD ["npm", "dev"]
+CMD ["npm", "run", "dev"]

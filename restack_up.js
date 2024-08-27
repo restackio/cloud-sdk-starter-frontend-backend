@@ -9,7 +9,7 @@ const main = async () => {
     environmentVariables: [
       {
         name: "NEXT_PUBLIC_API_HOSTNAME",
-        value: "",
+        value: "_",
       },
     ],
     dockerBuildContext: "frontend",
