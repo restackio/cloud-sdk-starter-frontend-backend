@@ -13,7 +13,7 @@ RUN npm install
 # Copy the rest of the application code
 COPY . .
 
-RUN npm build
+RUN npm run build
 
 ARG NEXT_PUBLIC_API_HOSTNAME
 ENV NEXT_PUBLIC_API_HOSTNAME=${NEXT_PUBLIC_API_HOSTNAME}
