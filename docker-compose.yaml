@@ -15,4 +15,4 @@ services:
     ports:
       - "3000:80" # Map port 80 in the container to port 3000 on the host
     environment:
-      - NEXT_PUBLIC_API_HOSTNAME=http://backend:5000
+      - NEXT_PUBLIC_API_HOSTNAME=

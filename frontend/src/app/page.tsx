@@ -9,6 +9,10 @@ export default function Home() {
   const [response, setResponse] = useState<any>(null);
   const [loading, setLoading] = useState<boolean>(false);
 
+  useEffect(() => {
+    console.log(`Backend URL: ${process.env.NEXT_PUBLIC_API_HOSTNAME}`);
+  }, []);
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);

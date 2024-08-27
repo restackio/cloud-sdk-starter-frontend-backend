@@ -8,23 +8,17 @@ const main = async () => {
     dockerFilePath: "frontend/Dockerfile",
     environmentVariables: [
       {
-        name: "TEST_VARIABLE",
-        value: "test_2",
+        name: "NEXT_PUBLIC_API_HOSTNAME",
+        value: "",
       },
     ],
-    dockerBuildContext: 'frontend'
+    dockerBuildContext: "frontend",
   };
 
   const backendApp = {
     name: "my-backend-app",
     dockerFilePath: "backend/Dockerfile",
-    environmentVariables: [
-      {
-        name: "TEST_VARIABLE",
-        value: "test_2",
-      },
-    ],
-    dockerBuildContext: 'backend'
+    dockerBuildContext: "backend",
   };
 
   await restackCloudClient.stack({

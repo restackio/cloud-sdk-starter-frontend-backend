@@ -14,6 +14,7 @@ RUN npm install
 COPY . .
 
 ARG NEXT_PUBLIC_API_HOSTNAME
+ENV NEXT_PUBLIC_API_HOSTNAME=${NEXT_PUBLIC_API_HOSTNAME}
 
 # Build the application
 RUN npm run build
@@ -22,4 +23,4 @@ RUN npm run build
 EXPOSE 80
 
 # Start the application
-CMD ["npm", "start"]
+CMD ["npm", "dev"]
