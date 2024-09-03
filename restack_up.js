@@ -6,13 +6,7 @@ const main = async () => {
   const backendApp = {
     name: "backend",
     dockerFilePath: "backend/Dockerfile",
-    environmentVariables: [
-      {
-        name: "TEST_VARIABLE",
-        value: "test_2",
-      },
-    ],
-    dockerBuildContext: 'backend'
+    dockerBuildContext: "backend",
   };
 
   const frontendApp = {

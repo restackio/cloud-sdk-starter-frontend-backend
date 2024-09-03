@@ -13,10 +13,10 @@ RUN npm install
 # Copy the rest of the application code
 COPY . .
 
-ARG NEXT_PUBLIC_API_HOSTNAME
-
-# Build the application
 RUN npm run build
+
+ARG NEXT_PUBLIC_API_HOSTNAME
+ENV NEXT_PUBLIC_API_HOSTNAME=${NEXT_PUBLIC_API_HOSTNAME}
 
 # Expose the port the app runs on
 EXPOSE 80

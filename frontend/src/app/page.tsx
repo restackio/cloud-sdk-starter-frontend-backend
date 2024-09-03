@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 export default function Home() {
   const [openApiKey, setOpenApiKey] = useState<string>("");
