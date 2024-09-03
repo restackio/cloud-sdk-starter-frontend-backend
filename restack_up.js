@@ -12,13 +12,13 @@ const main = async () => {
   const frontendApp = {
     name: "frontend",
     dockerFilePath: "frontend/Dockerfile",
+    dockerBuildContext: 'frontend',
     environmentVariables: [
       {
         name: "NEXT_PUBLIC_API_HOSTNAME",
         linkTo: backendApp.name,
       },
     ],
-    dockerBuildContext: 'frontend'
   };
 
 
