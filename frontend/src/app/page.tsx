@@ -14,8 +14,9 @@ export default function Home() {
     setLoading(true);
 
     try {
+      const protocol = window.location.protocol;
       const apiResponse = await fetch(
-        `${process.env.NEXT_PUBLIC_API_HOSTNAME}/query`,
+        `${protocol}//${process.env.NEXT_PUBLIC_API_HOSTNAME}/query`,
         {
           method: "POST",
           headers: {
