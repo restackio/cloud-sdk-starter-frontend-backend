@@ -10,8 +10,12 @@ export default function Home() {
   const [loading, setLoading] = useState<boolean>(false);
   const [serverStatus, setServerStatus] = useState<string>("unknown");
   const [pingLoading, setPingLoading] = useState<boolean>(false);
-  const protocol = window.location.protocol;
-  const apiRootUrl = `${protocol}//${process.env.NEXT_PUBLIC_API_HOSTNAME}`;
+  const [apiRootUrl, setApiRootUrl] = useState<string>("");
+
+  useEffect(() => {
+    const protocol = window.location.protocol;
+    setApiRootUrl(`${protocol}//${process.env.NEXT_PUBLIC_API_HOSTNAME}`);
+  }, []);
 
   const pingServer = async () => {
     setPingLoading(true);
@@ -32,8 +36,10 @@ export default function Home() {
   };
 
   useEffect(() => {
-    pingServer();
-  }, []);
+    if (apiRootUrl) {
+      pingServer();
+    }
+  }, [apiRootUrl]);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
