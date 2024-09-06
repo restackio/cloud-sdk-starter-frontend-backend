@@ -27,7 +27,7 @@ To get started with this repository, follow the instructions below:
 
 1. Create a repo based on this repository:
 
-[Create repo from example]([https://website-name.com](https://github.com/new?template_name=cloud-sdk-starter-frontend-backend&template_owner=restackio))
+[Create repo from example](https://github.com/new?template_name=cloud-sdk-starter-frontend-backend&template_owner=restackio)
 
 2. Clone your new repo into local
 
