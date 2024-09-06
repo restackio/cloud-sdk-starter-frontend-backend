@@ -25,12 +25,11 @@ Restack Cloud SDK allows developers to seamlessly deploy their AI products, ensu
 
 To get started with this repository, follow the instructions below:
 
-1. Clone the repository:
+1. Create a repo based on this repository:
 
-   ```bash
-   git clone https://github.com/yourusername/restack-sample-repo.git
-   cd restack-sample-repo
-   ```
+[Create repo from example]([https://website-name.com](https://github.com/new?template_name=cloud-sdk-starter-frontend-backend&template_owner=restackio))
+
+2. Clone your new repo into local
 
 ## Testing it locally
 
