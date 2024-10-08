@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@restackio/cloud": "^1.0.17",
-    "next": "14.2.5",
+    "next": "14.2.10",
     "react": "^18",
     "react-dom": "^18"
   },
