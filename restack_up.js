@@ -1,4 +1,4 @@
-import { RestackCloud } from "@restackio/restack-sdk-cloud-ts";
+import { RestackCloud } from "@restackio/cloud";
 
 const main = async () => {
   const restackCloudClient = new RestackCloud(process.env.RESTACK_SDK_TOKEN);
@@ -12,7 +12,7 @@ const main = async () => {
   const frontendApp = {
     name: "frontend",
     dockerFilePath: "frontend/Dockerfile",
-    dockerBuildContext: 'frontend',
+    dockerBuildContext: "frontend",
     environmentVariables: [
       {
         name: "NEXT_PUBLIC_API_HOSTNAME",
@@ -20,7 +20,6 @@ const main = async () => {
       },
     ],
   };
-
 
   await restackCloudClient.stack({
     name: "development environment",
